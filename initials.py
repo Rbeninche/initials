@@ -1,4 +1,4 @@
-name = input("Please enter your full name: ")
+name = input("Please enter your full name: ").upper()
 
 name_list = list(name.split())
 
