@@ -1,14 +1,19 @@
 def get_initials(full_name):
 
-    name_list = list(full_name.split())
+    upper_fullname = full_name.upper()
 
+    initial = ''
+
+    name_list = upper_fullname.split(" ")
     for name in name_list:
-        for index in range(len(name)):
-            if index == 0:
-                print(name[index], end='')
+        initial += name[0]
+
+    return initial
+
+
 def main():
-    name = input("Please enter your full name: ").upper()
-    get_initials(name)
+    print(get_initials("Ozzie Smith"))
+
 
 if __name__ == '__main__':
     main()
